@@ -7,6 +7,8 @@ const geocode = require('./utils/geocode')
 
 app = express()
 app.set('view engine', 'hbs')
+
+const port = process.env.PORT || 3000
 // app.set('view engine', 'html');
 // app.engine('html', require('hbs').__express);
 
@@ -107,6 +109,6 @@ app.get('/help/*', (req, res)=>{
 
 
 
-app.listen(3000, ()=> {
-    console.log('Server is up on port 3000');
+app.listen(port, ()=> {
+    console.log('Server is up on port' +port);
 })
