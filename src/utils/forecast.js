@@ -12,7 +12,7 @@ const forecast = (lat,long, callback) => {
         } else if (body.error) {
             callback('Unable to get get forecast for location, pls try another search', undefined)
         } else {
-            callback(undefined, body.current.weather_descriptions + '. Temperature is ' +body.current.temperature + ' degree celcius')
+            callback(undefined, body.current.weather_descriptions + '. Temperature is ' +body.current.temperature + ' degree celcius '+'Humidity is ' + body.current.humidity + 'Cloud cover is '+body.current.cloudcover )
         }
     })
 }
